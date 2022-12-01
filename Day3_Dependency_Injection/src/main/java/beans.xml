@@ -5,9 +5,22 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
-<bean id="s1" class="org.tnsindia.di.Student"> 
-<constructor-arg name="studentName" value="Pranit Jadhac"/>
-<constructor-arg name="rollNo" value="1010"/>
-</bean>
+   <bean id="def" class="org.tnsindia.di2withcollections.Cars">
+   	   <property name="carscompany">
+            <list>
+                <value>Audi</value>
+                <value>Mercedes</value>
+            </list>
+        </property>
+        
+        <property name="carssmodels">
+            <set>
+                <value>X6</value>
+                <value>C220</value>	
+               
+            </set>
+        </property>
+    
+   </bean>
 
 </beans>
